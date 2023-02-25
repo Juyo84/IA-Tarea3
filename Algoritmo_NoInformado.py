@@ -103,6 +103,7 @@ def algoritmo(valor_h, datos):
     #TERMINA EL ALGORIMO
     return (list([capacidad_Actual, beneficio, nodos_Factibles]))
 
+start_time = time.time()
 #REALIZA n ITERACIONES
 for iteraciones in range(0,1,1):
     for filename in os.listdir(folder + 'low-dimensional\\'):
@@ -119,3 +120,5 @@ for iteraciones in range(0,1,1):
                   + str(resultado[2]) + "        Runtime: " + str(runtime) + "\n")
             
             datos = []
+runtime = time.time() - start_time
+print("Runtime: " + str("{:.15f}".format(runtime)) + "\n")
