@@ -3,7 +3,7 @@ import os
 import time
 from os import system
 
-folder = 'C:\\Users\\HP\\Documents\\IA-Tarea3\\'    #   DIRECCION DEL FOLDER "\\low-dimensional"
+folder = 'D:\\GitHub\\IA-Tarea3\\'    #   DIRECCION DEL FOLDER "\\low-dimensional"
 datos = []
 
 system("cls")   #   LIMPIA LA TERMINAL
@@ -104,7 +104,7 @@ def algoritmo(valor_h, datos):
     return (list([capacidad_Actual, beneficio, nodos_Factibles]))
 start_time = time.time()
 #REALIZA n ITERACIONES
-for iteraciones in range(0,10000,1):
+for iteraciones in range(0,1000,1):
     
     for filename in os.listdir(folder + 'low-dimensional\\'):
         if filename.endswith(".csv"):
