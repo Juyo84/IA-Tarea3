@@ -3,7 +3,7 @@ import os
 import time
 from os import system
 
-folder = 'C:\\Users\\HP\\Documents\\IA-Tarea3\\'    #   DIRECCION DEL FOLDER "\\low-dimensional"
+folder = 'C:\\Users\\User\\OneDrive - uanl.edu.mx\Documents\\Archivos FCFM\Actividades\\6° Sem\\IA\\IA-Tarea3\\'    #   DIRECCION DEL FOLDER "\\low-dimensional"
 datos = []
 
 system("cls")   #   LIMPIA LA TERMINAL
@@ -104,7 +104,7 @@ def algoritmo(valor_h, datos):
     return (list([capacidad_Actual, beneficio, nodos_Factibles]))
 start_time = time.time()
 #REALIZA n ITERACIONES
-for iteraciones in range(0,10000,1):
+for iteraciones in range(0,1,1):
     
     for filename in os.listdir(folder + 'low-dimensional\\'):
         if filename.endswith(".csv"):
@@ -112,7 +112,7 @@ for iteraciones in range(0,10000,1):
             datos = asignar_Instancias(filename)    #  PASAMOS LAS INSTANCIAS A UNA VARIABLE
             
             resultado = algoritmo(beneficio_peso(datos), datos)
-            
+
             #SE IMPRIME LOS RESULTADOS
             #print("-------------------------------------------------------------------------")
             print("Capacidad: " + str("{:.4f}".format(resultado[0])) + "      Beneficio: " + str("{:.4f}".format(resultado[1])) + "       Nodos: "
